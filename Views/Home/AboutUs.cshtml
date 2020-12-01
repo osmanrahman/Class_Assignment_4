@@ -1,0 +1,151 @@
+﻿
+@{
+    ViewData["Title"] = "AboutUs";
+}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="~/css/site.css">
+    <style>
+
+        body {
+            color: white;
+            background-color: #0094ff;
+            font-family: Arial;
+        }
+
+        /* Center website */
+        .main {
+            width: 100%;
+            margin: auto;
+        }
+
+        h1 {
+            word-break: break-all;
+        }
+
+        .row {
+            margin: 8px -16px;
+        }
+
+            /* Add padding BETWEEN each column */
+            .row,
+            .row > .column {
+                padding: 10px;
+            }
+
+        /* Create four equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 30%;
+        }
+
+        /* Clear floats after rows */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Content */
+        .content {
+            background-color: white;
+            padding: 10px;
+        }
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @@media screen and (max-width: 600px) {
+            .column {
+                width: 50%;
+            }
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @@media screen and (max-width: 300px) {
+            .column {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <div class="topnav">
+           <a href="Index.cshtml">Accidents And Crashes</a>
+           <a href="Crashstats.cshtml">Monroe county crash Data Description</a>
+           <a href="Visualize.cshtml">Visualising DATA</a>
+           <a class="active" href="Aboutus.cshtml">About our Team</a>
+       </div>-->
+    <!-- MAIN (Center website) -->
+    <div class="main">
+
+        <h1>About US</h1>
+        <p>
+            The mission of our company is to provide the residents of New York, specifically the 5 boroughs, access to real-time vehicle crash data.  We want all residents to know how many accidents occur each year, types of vehicle involved, location and several other data points.  The goal is to have the knowledge at your fingertips so you can make sounds decisions when it comes to insurance, vehicle purchase, and conduct your own analysis.
+            Our data is pulled directly from the NY crash database.  We guarantee accuracy of the data and each analysis conducted.
+        </p>
+        <hr>
+
+        <h2>Leadership</h2>
+
+        <!-- Portfolio Gallery Grid -->
+        <div class="row">
+            <!--  <div class="column">
+                <div class="content">
+                    <img src="~/images/Vivek.jpg" style="width:100%">
+                    <h3>Vivek</h3>
+                    <p> Designed the website</p>
+                        <a href="https://github.com/vivekmankar">Github</a>
+                        <a href="https://www.linkedin.com/in/vivekmankar/">LinkedIn</a>
+                </div>
+            </div>-->
+            <div class="column">
+                <div class="content">
+                    <img src="~/images/Neethi.jpg" style="width:100%">
+                    <h3 style="color: black;"> Neethi Vuchula</h3>
+                    <h4 style="color: black;"> Chief Information Officer</h4>
+                    <p style="color: black;"> Neethi is the founder of Safe NYC and is responsible for overseeing all technology needs of the company. Further overseeing the development of all platforms while creating business value through technology. </p>
+                    <a href="https://github.com/vuchula">Github</a>
+                    <a href="https://www.linkedin.com/in/neethivuchula/">LinkedIn</a>
+                </div>
+            </div>
+            <div class="column">
+                <div class="content">
+                    <img src="~/images/Osman.jpg" style="width:100%">
+                    <h3 style="color: black;"> Osman Rahman</h3>
+                    <h4 style="color: black;"> Chief Data Officer</h4>
+                    <p style="color: black;"> Osman is responsible for the firm’s enterprise wide data and information strategy, governance, control, policy development, and effective exploitation. Further data leverage to advance the cause of the organization. </p>
+                    <a href="https://github.com/osmanrahman">Github </a>
+                    <a href="https://www.linkedin.com/in/osmanrahman/">LinkedIn</a>
+                </div>
+            </div>
+            <div class="column">
+                <div class="content">
+                    <img src="~/images/Vivek.jpg" style="width:100%">
+                    <h3 style="color: black;"> Vivek Mankar</h3>
+                    <h4 style="color: black;"> Chief Technology Officer</h4>
+                    <p style="color: black;"> Vivek is responsible for setting a vision for how technology will be used in the company.  He ensures that the technology resources meet the company's short and long-term needs. Further managing technology budgets and time frames.</p>
+                    <a href="https://github.com/vivekmankar">Github</a>
+                    <a href="https://www.linkedin.com/in/vivekmankar/">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+
+
+        <h1> Data Model </h1>
+        <div class="content" style="width:57%">
+            <img src="~/images/datamodel.jpg">
+            <p style="color:black;">
+                The below data model represents how our database is structured.  Our main table (CrashData) collects all the IDs of each crash, date and time.  There is a one to one relationship to the Location table which outlines the exact location of the crash.  This includes borough, latitude, longitude and other demographics data.   There are two other tables (Vehicle, Injury), one to many relationship, that captures each vehicle involved in the incident along with injury (person, pedestrian, cyclist, motorist).
+            </p>
+        </div>
+
+        <!-- END MAIN -->
+    </div>
+
+</body>
+</html>
